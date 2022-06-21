@@ -38,7 +38,8 @@ export default function TextForm(props) {
         // console.log("On Change");
         setText(event.target.value);
     }
-    const[text,setText]=useState("Enter text here");
+    const[text,setText]=useState("");
+    // const[text,setText]=useState();
     // setText("new Text");
   return (
     <>
@@ -47,7 +48,7 @@ export default function TextForm(props) {
         <h1>{props.heading}</h1>
         <div className="mb-3">
         
-        <textarea className="form-control" id="myBox" rows="7" value={text} onChange={handleOnChange} style={{backgroundColor:
+        <textarea className="form-control" id="myBox" placeholder='Enter your text here' rows="7" value={text} onChange={handleOnChange} style={{backgroundColor:
             props.mode==='light'?'white':'#13466e',color: props.mode==='dark'?'white':'black'
         }}></textarea>
         </div>
